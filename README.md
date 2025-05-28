@@ -20,8 +20,8 @@ Botato is an intelligent AI assistant built using LangGraph and LangChain, desig
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/WebSurf-Agent.git
-cd WebSurf-Agent
+git clone https://github.com/ramiyappan/Botato.git
+cd Botato
 ```
 
 2. Create and activate a virtual environment:
@@ -62,7 +62,7 @@ print(response['messages'][-1].content)
 ## Project Structure 📁
 
 ```
-WebSurf-Agent/
+Botato/
 ├── agent.py           # Main agent implementation
 ├── system_prompt.txt  # System instructions for the agent
 ├── utils/            # Utility functions and logging
