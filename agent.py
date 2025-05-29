@@ -11,6 +11,7 @@ from langchain_openai import ChatOpenAI
 import uuid
 from utils.logger import setup_logger
 from dotenv import load_dotenv
+from datetime import date
 load_dotenv()
 
 # --- Logger ---
@@ -67,8 +68,9 @@ class AssistantAgent:
         logger.info(f"Initialized {self.llm.model_name} Assistant with tools.")
 
     def _load_system_prompt(self) -> SystemMessage:
+        today = date.today().strftime("%B %d, %Y")
         with open("system_prompt.txt", "r") as file:
-            return SystemMessage(content=file.read())
+            return SystemMessage(content=file.read().format(today=today))
 
     def run(self, state: MessagesState):
         logger.info(f"Invoking assistant with {len(state['messages'])} messages.")

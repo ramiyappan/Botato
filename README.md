@@ -62,12 +62,15 @@ print(response['messages'][-1].content)
 ## Project Structure 📁
 
 ```
-Botato/
-├── agent.py           # Main agent implementation
-├── system_prompt.txt  # System instructions for the agent
-├── utils/            # Utility functions and logging
-├── logs/             # Log files
-└── venv/             # Virtual environment
+.
+├── app.py              # Streamlit Frontend app
+├── agent.py            # Main agent implementation
+├── system_prompt.txt   # System instructions for the agent
+├── notebooks/          # Jupyter notebooks for development
+├── utils/              # Utility functions
+    ├── logger.py       # Setup logging
+├── logs/               # Log files
+└── venv/               # Virtual environment
 ```
 
 ## Contributing 🤝
